@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<%- include('./includes/head.ejs'); %>
+<body>
+    <%- include('./includes/sidebar.ejs'); %>
+    <main>
+        <section>
+            <div class="box">
+                <h2>Mes diplômes</h2>
+                <br />
+                <% studies.forEach(e => { %>
+                <form action="/study/delete/<%= e.id %>?_method=delete" method="post">
+                    <p><%= e.studies %></p>
+                    <br />
+                    <button class="submit"><a href="/study/edit/<%= e.id %>">Éditer</a></button>
+                    <button type="submit" class="submit" onclick="return confirm('Est-tu vraiment sûr(e) de vouloir supprimer ceci ?')">Supprimer</button>
+                </form>
+                <% }) %>
+            </div>
+        </section>
+        <section>
+            <div class="box">
+                <h2>Mes compétences</h2>
+                <br />
+                <% skills.forEach(e => { %>
+                <form action="/skill/delete/<%= e.id %>?_method=delete" method="post">
+                    <p><%= e.skill %></p>
+                    <br />
+                    <button class="submit"><a href="/skill/edit/<%= e.id %>">Éditer</a></button>
+                    <button type="submit" class="submit" onclick="return confirm('Est-tu vraiment sûr(e) de vouloir supprimer ceci ?')">Supprimer</button>
+                </form>
+                <% }) %>
+            </div>
+        </section>
+        <section>
+            <div class="box">
+                <h2>Mes projets</h2>
+                <br />
+                <% projects.forEach(e => { %>
+                <form action="/project/delete/<%= e.id %>?_method=delete" method="post">
+                    <p><%= e.project %></p>
+                    <br />
+                    <button class="submit"><a href="/project/edit/<%= e.id %>">Éditer</a></button>
+                    <button type="submit" class="submit" onclick="return confirm('Est-tu vraiment sûr(e) de vouloir supprimer ceci ?')">Supprimer</button>
+                </form>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    <%- include('./includes/footer.ejs'); %>
+</body>
+</html>

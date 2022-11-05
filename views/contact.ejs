@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<%- include('./includes/head.ejs'); %>
+<body>
+    <%- include('./includes/header.ejs'); %>
+    <main>
+        <section id="contacts">
+            <div class="box light">
+                <h2>Contacts</h2>
+                <iframe name="osef" id="osef" style="display: none;"></iframe>
+                <form name="contact" id="form" action="/contact" method="post" class="contact" target="osef">
+                    <div>
+                        <input type="text" name="name" id="name" placeholder="Nom" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <select name="job" id="job">
+                            <option value="front-end">Front-end</option>
+                            <option value="back-end">Back-end</option>
+                            <option value="full-stack">Full-stack</option>
+                        </select>
+                        <input type="text" name="title" id="title" placeholder="Titre" required>
+                        <textarea name="message" id="message" placeholder="Message" cols="40" rows="10" required></textarea>
+                    </div>
+                    <div class="g-recaptcha" data-sitekey="6Le9Jo4gAAAAAII1JPoquZk4Z7wF93GLOrrBZjr0"></div>
+                    <div>
+                        <button type="submit" class="submit" onclick="toggle_text();">Envoyer</button>
+                    </div>
+                </form>
+                <!-- <span id="ok">Merci d'avoir demandé mes services !</span> -->
+            </div>
+        </section>
+    </main>
+    <%- include('./includes/footer.ejs'); %>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+</html>

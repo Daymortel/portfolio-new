@@ -1,0 +1,15 @@
+:root {
+    --background : #f1f1f1;
+    --text : #555555;
+    --box : #ffffff;
+}
+[color-scheme="light"] {
+    --background : #f1f1f1;
+    --text : #555555;
+    --box : #ffffff;
+}
+[color-scheme="dark"] {
+    --background : #0c0c0c;
+    --text : #aaaaaa;
+    --box : #000000;
+}

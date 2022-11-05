@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<%- include('./includes/head.ejs'); %>
+<body>
+    <%- include('./includes/sidebar.ejs'); %>
+    <main>
+        <section>
+            <div class="box">
+                <h2>Ajouter une étude</h2>
+                <br />
+                <form action="/study/insert" method="post">
+                    <label for="study">Nom de l'étude</label>
+                    <input type="text" name="study" required>
+                    <br />
+                    <label for="year">Année de l'étude</label>
+                    <input type="text" name="year" required>
+                    <br />
+                    <button type="submit" class="submit">Ajouter</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="box">
+                <h2>Ajouter une compétence</h2>
+                <br />
+                <form action="/skill/insert" method="post">
+                    <label for="skill">Nom de la compétence</label>
+                    <input type="text" name="skill" required>
+                    <br />
+                    <label for="percent">Pourcentage maîtrisé</label>
+                    <input type="number" name="percent" required>
+                    <br />
+                    <button type="submit" class="submit">Ajouter</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <div class="box">
+                <h2>Ajouter un projet</h2>
+                <br />
+                <form action="/project/insert" method="post" enctype="multipart/form-data">
+                    <label for="project">Nom du projet</label>
+                    <input type="text" name="project" required>
+                    <br />
+                    <label for="link">Lien du projet</label>
+                    <input type="text" name="link" required>
+                    <br />
+                    <label for="image">Image du projet</label>
+                    <input type="file" name="image" required>
+                    <button type="submit" class="submit">Ajouter</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('./includes/footer.ejs'); %>
+</body>
+</html>

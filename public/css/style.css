@@ -1,0 +1,338 @@
+@import "color.css";
+/* Initialisation*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background);
+}
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+/*Réutilisables*/
+.row{
+    width: 80%;
+    margin: auto;
+}
+/*Titres*/
+h2,
+h3,
+p,
+a,
+label,
+.logout{
+    color: var(--text);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+h1{
+    font-size: 100%;
+}
+/*Header*/
+header{
+    background-image: url(/imgs/fond.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: #000033;
+    position: fixed;
+    z-index: 1;
+}
+label.logo img{
+    width: 70px;
+    padding-top: 5px;
+    border-radius: 50%;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+}
+nav li{
+    display: inline-block;
+    margin: 0 20px;
+    line-height: 80px;
+}
+nav a,
+nav li label{
+    color: #dddddd;
+    font-size: 18px;
+    padding: 7px 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover,
+.logout:hover{
+    border-bottom: 1px solid #00ffff;
+    transition: .5s;
+    cursor: pointer;
+}
+label a:hover,
+.social a:hover{
+    border: none;
+}
+.check{
+    display: none;
+}
+nav #icon{
+    color: #dddddd;
+    font-size: 30px;
+    line-height: 80px;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+.name{
+    color: #ffffff;
+    font-size: 50px;
+    padding-top: 40vh;
+    padding-left: 2rem;
+}
+.name p{
+    text-transform: none;
+}
+.logout{
+    background-color: #00000000;
+    border: none;
+    font-size: 110%;
+    padding: 5px 10px;
+}
+.hamburger,
+.toggler {
+    display: none;
+}
+/* Button Dark / Light Mode*/
+.buttonMode {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 7.5rem;
+    height: 3.3rem;
+    border: 0.1rem solid var(--borderColor);
+    border-radius: 1rem;
+    background-color: var(--bgCarouselBtn);
+    transition: background-color 0.5s linear, border-color 0.5s linear;
+}
+  
+.buttonMode .checkbox {
+    opacity: 0;
+    width: 7.5rem;
+    height: 3.5rem;
+    position: absolute;
+    transition: transform 0.5s linear;
+    z-index: 20;
+}
+  
+.buttonMode .label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin: 0rem 0.25rem;
+    border-radius: 1rem;
+    background-color: var(--bgButton);
+    padding: 0.5rem;
+    transition: transform 0.5s linear, background-color 0.5s linear;
+}
+  
+.iconMode::before {
+    font-size: 1.5rem;
+    color: var(--bgCarouselBtn);
+    transition: background-image 0.5s linear;
+}
+  
+.checkbox:checked ~ .label {
+    transform: translateX(4.1rem);
+    background-color: var(--bgButton);
+}
+.checkbox:checked ~ .label {
+    transform: translateX(4.1rem);
+    background-color: var(--bgButton);
+}
+  
+.iconNavDesk::before {
+    color: var(--iconColor);
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+    font-weight: normal;
+}
+.bi-moon-stars-fill::before {
+    color: var(--iconColor);
+    transition: all 0.5s linear;
+}
+  
+button {
+    display: flex;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+/*Main*/
+section{
+    width: 80%;
+    margin: 20px 50%;
+    transform: translate(-50%);
+}
+.temps{
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff90;
+    text-align: center;
+    float: left;
+    margin-top: 15px;
+    margin-left: 140px;
+    width: 400px;
+}
+.skills{
+    display: flex;
+    flex-direction: column;
+}
+.skill{
+    height: 20px;
+    width: 70%;
+    margin: 10px 50%;
+    transform: translate(-50%);
+    box-sizing: content-box;
+    position: relative;
+    background-color: #aaaaaa;
+    border-radius: 25px;
+    padding: 5px 0;
+}
+.skill span{
+    display: block;
+    background: #00ffff;
+    border-radius: 25px;
+    padding: 5px 0;
+    margin-top: -5px;
+}
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projects img{
+    height: 150px;
+    width: 250px;
+    margin: 10px 20px;
+}
+#date{
+    font-size: 150%;
+    position: relative;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+#heure_exacte{
+    font-size: 150%;
+    position: relative;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.box{
+    width: 100%;
+    margin: auto;
+    padding: 5%;
+    text-align: center;
+    background-color: var(--box);
+}
+h2{
+    border-bottom: 1px solid #00ffff;
+    padding-bottom: 5px;
+}
+h3{
+    padding-top: 10px;
+}
+p,
+a{
+    padding-top: 10px;
+}
+input, select, textarea{
+    display: block;
+    margin-left: 50%;
+    transform: translate(-50%);
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px #008b8b;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.submit{
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #008b8b;
+    color: #ffffff;
+    cursor: pointer;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+.submit:hover,
+.submit a:hover{
+    background-color: #ffffff;
+    color: #008b8b;
+    border: none;
+    transition: 0s;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin-top: 1rem;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+/*Footer*/
+footer{
+    background-color: #000033;
+    height: 100px;
+}
+.social{
+    float: left;
+    margin-top: 35px;
+    margin-left: 40px;
+}
+#copy{
+    color: #ffffff;
+    float: right;
+    margin-top: 35px;
+    margin-right: 40px;
+    text-transform: uppercase;
+}
+.social i{
+    font-size: 200%;
+}
+.bi-linkedin{
+    padding-right: 20px;
+    height: 40px;
+}
+.bi-facebook{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 40px;
+}
+.bi-instagram{
+	padding-left: 20px;
+    height: 40px;
+}
+.bi-linkedin:hover{
+    color: #0077b5;
+}
+.bi-facebook:hover{
+    color: #3b5998;
+}
+.bi-instagram:hover{
+    color: #7232bd;
+}

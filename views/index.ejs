@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<%- include('./includes/head.ejs'); %>
+<body>
+    <%- include('./includes/header.ejs'); %>
+    <main>
+        <section id="qualifications">
+            <div class="box">
+                <h2>Etudes</h2>
+                <% studies.forEach(e => { %>
+                <h3><%= e.year %></h3>
+                <p><%= e.study %></p>
+                <% }) %>
+                <!-- <h3>2022 - 2023</h3>
+                <p>IMTS, Concepteur dévelopeur d'application</p>
+                <h3>2020 - 2022</h3>
+                <p>IMTS, Développeur web et web mobile</p> -->
+            </div>
+        </section>
+        <section id="connaissances">
+            <div class="box">
+                <h2>Compétences</h2>
+                <% skills.forEach(e => { %>
+                <div class="skill">
+                    <span style="width: <%= e.percent %>%"><%= e.skill %></span>
+                </div>
+                <% }) %>
+                <!-- <h3>Langages de programmation</h3>
+                <p>- HTML</p>
+                <p>- CSS</p>
+                <p>- JavaScript</p>
+                <p>- Node JS</p>
+                <p>- Database</p> -->
+            </div>
+        </section>
+        <section id="projets">
+            <div class="box">
+                <h2>Projets</h2>
+                <% projects.forEach(e => { %>
+                <img src="/imgs/projects/<%= e.image %>" alt="<%= e.project %>">
+                <p><a href="<%= e.link %>" target="_blank"><%= e.project %></a></p>
+                <% }) %>
+                <!-- <h3>Projets C/Python</h3>
+                <p><a href="https://github.com/Daymortel/next_gen" target="_blank">Choice between ps5 or xsx</a></p>
+                <p><a href="https://github.com/Daymortel/money" target="_blank">Money Render</a></p>
+                <h3>Projets Godot</h3>
+                <p><a href="https://github.com/Daymortel/drones-invaders" target="_blank">Drones Invaders</a></p> -->
+            </div>
+        </section>
+    </main>
+    <%- include('./includes/footer.ejs'); %>
+</body>
+</html>

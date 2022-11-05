@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<%- include('./includes/head.ejs'); %>
+<body>
+    <%- include('./includes/header.ejs'); %>
+    <main>
+        <section>
+            <div class="box dark">
+                <form action="/auth/signin" method="post">
+                    <div>
+                        <label for="email">Identifiant (email)</label>
+                        <br />
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <br />
+                    <div>
+                        <label for="password">Mot de passe</label>
+                        <br />
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <br />
+                    <div class="g-recaptcha" data-sitekey="6Le9Jo4gAAAAAII1JPoquZk4Z7wF93GLOrrBZjr0"></div>
+                    <br />
+                    <button type="submit" class="button" id="login">Connexion</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <%- include('./includes/footer.ejs'); %>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</body>
+</html>

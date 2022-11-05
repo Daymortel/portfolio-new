@@ -1,0 +1,32 @@
+<header>
+    <div class="sidebar">
+        <input type="checkbox" class="toggler" />
+        <div class="hamburger"><div></div></div>
+        <nav class="menu">
+            <label class="logo"><a href="index.html"><img src="/imgs/avatar.jpg" alt="Avatar"></img></a></label>
+            <div class="buttonMode">
+                <input type="checkbox" class="checkbox">
+                <label for="checkbox" class="label">
+                    <i class="iconMode bi bi-sun"></i>
+                </label>
+            </div>
+            <ul id="menu">
+                <li><a href="/admin">Accueil</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="/edit">Édition</a></li>
+                <li>
+                    <form action="/auth/signout" method="post">
+                        <button type="submit" class="logout">Déconnexion</button>
+                    </form>
+                </li>
+            </ul>
+            <label id="icon">
+                <i class="ion-navicon-round"></i>
+            </label>
+            <div class="line"></div>
+        </nav>
+    </div>
+    <div class="name">
+        <h1 id="typeText"></h1>
+    </div>
+</header>
